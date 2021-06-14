@@ -1,4 +1,4 @@
-import '../importer.dart';
+import 'importer.dart';
 import 'HomePage.dart';
 
 class MyApp extends StatelessWidget {
@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-
       home: HomePage(title: 'サブマネ'),
     );
   }

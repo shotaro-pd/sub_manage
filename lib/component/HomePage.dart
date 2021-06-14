@@ -1,4 +1,4 @@
-import '../importer.dart';
+import 'importer.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key key, this.title}) : super(key: key);

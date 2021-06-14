@@ -1,4 +1,4 @@
-import '../importer.dart';
+import 'component/importer.dart';
 import 'component/MyApp.dart';
 
 void main() {
