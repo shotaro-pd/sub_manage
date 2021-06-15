@@ -1,16 +1,13 @@
 # sub_manage
 
-subscript manage app
+サブスクライブ管理アプリです。
 
-## Getting Started
+## 使用技術、その他設定等記載
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+###フォルダ構成(lib配下)
+- components
+  - ここにView(画面などを入れる)
+- services
+  - ここにロジックを格納 
+- configs
+  - ここに設定情報を格納 
