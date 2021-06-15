@@ -1,17 +1,16 @@
 import 'importer.dart';
-import 'HomePage.dart';
+import 'Header.dart';
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'サブマネ',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          appBar: Header(title: 'サブマネ'), // ヘッダー
+          body: Center(child: Text('おらおらおら')),
       ),
-      home: HomePage(title: 'サブマネ'),
     );
   }
 }
