@@ -1,5 +1,6 @@
 import 'importer.dart';
 import 'Header.dart';
+import 'HomePage.dart';
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: Header(title: 'サブマネ'), // ヘッダー
-          body: Center(child: Text('おらおらおら')),
+          body: HomePage(),
       ),
     );
   }

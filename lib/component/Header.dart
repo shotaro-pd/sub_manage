@@ -11,12 +11,18 @@ class Header extends StatelessWidget with PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leading: IconButton(
+        icon: Icon(Icons.settings, color: Colors.white,),
+        onPressed: () {  },
+      ),
       title: Text(this.title),
       actions: <Widget>[
         IconButton(
-          icon: Icon(Icons.add, color: Colors.white,), onPressed: () {  },
+          icon: Icon(Icons.add, color: Colors.white,),
+          onPressed: () {  },
         ),
       ],
+      centerTitle: true,
     );
   }
 }
