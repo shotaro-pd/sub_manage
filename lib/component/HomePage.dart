@@ -17,7 +17,6 @@ class HomePageState extends State<HomePage> {
           _menuItem("niconico Premium","980", Icon(Icons.movie)),
         ]
     );
-    throw UnimplementedError();
   }
 
   Widget _menuItem(String title,String price, Icon icon) {
