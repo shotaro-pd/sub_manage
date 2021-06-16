@@ -1,4 +1,5 @@
 import 'importer.dart';
+import 'RegisterPage.dart';
 
 class Header extends StatelessWidget with PreferredSizeWidget{
   Header({Key key, this.title}) : super(key: key);
@@ -19,7 +20,13 @@ class Header extends StatelessWidget with PreferredSizeWidget{
       actions: <Widget>[
         IconButton(
           icon: Icon(Icons.add, color: Colors.white,),
-          onPressed: () {  },
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => RegisterPage(),
+                )
+            );
+          },
         ),
       ],
       centerTitle: true,
