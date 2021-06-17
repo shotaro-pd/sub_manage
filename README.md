@@ -6,8 +6,16 @@
 
 ### フォルダ構成(lib配下)
 - components
-  - ここにView(画面などを入れる)
+  - View(画面などを入れる)
+    - icon_button
+        - 共通化したIconButtonを格納
+    - body
+        - 共通化したBodyを格納
 - services
-  - ここにロジックを格納 
+  - ロジックを格納
 - configs
-  - ここに設定情報を格納 
+  - 設定情報を格納
+- models
+    - モデルの格納
+- repositories
+    - DB操作
