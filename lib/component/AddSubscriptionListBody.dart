@@ -1,15 +1,19 @@
 import 'importer.dart';
 
-class RegisterPage extends StatefulWidget {
+class AddSubscriptionListBody extends StatefulWidget {
+
+  AddSubscriptionListBody({Key key}) : super(key: key);
+
   @override
-  RegisterPageState createState() => new RegisterPageState();
+  State<StatefulWidget> createState() => new _AddSubscriptionListBodyState();
 }
 
-class RegisterPageState extends State<RegisterPage> {
+class _AddSubscriptionListBodyState extends State<AddSubscriptionListBody> {
   @override
   Widget build(BuildContext context) {
     return ListView(
         children: [
+          _menuItem("自分で追加","0", Icon(Icons.add_box_outlined)),
           _menuItem("Amazon Prime","500", Icon(Icons.local_shipping)),
           _menuItem("Youtube Premium","1180", Icon(Icons.movie)),
           _menuItem("Netflix","1000", Icon(Icons.movie)),
