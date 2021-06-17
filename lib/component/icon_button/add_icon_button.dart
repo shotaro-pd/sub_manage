@@ -1,8 +1,8 @@
 import '../importer.dart';
-import '../AddSubscriptionListBody.dart';
-import '../Convenient.dart';
-import '../Header.dart';
-import 'BackIconButton.dart';
+import '../body/add_subscription_list_body.dart';
+import '../convenient.dart';
+import '../header.dart';
+import 'back_icon_button.dart';
 
 
 //AddIconButtonのパーツ
