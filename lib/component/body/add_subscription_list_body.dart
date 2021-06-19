@@ -1,5 +1,10 @@
 import '../importer.dart';
 
+enum Answers{
+  YES,
+  NO
+}
+
 class AddSubscriptionListBody extends StatefulWidget {
 
   AddSubscriptionListBody({Key key}) : super(key: key);
@@ -9,6 +14,11 @@ class AddSubscriptionListBody extends StatefulWidget {
 }
 
 class _AddSubscriptionListBodyState extends State<AddSubscriptionListBody> {
+
+  String _value = '';
+
+  void _setValue(String value) => setState(() => _value = value);
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -62,13 +72,46 @@ class _AddSubscriptionListBodyState extends State<AddSubscriptionListBody> {
                 ),
 
               ),
+
             ],
           )
       ),
       onTap: () {
-        print("onTap called.");
+        openDialog(context);
       },
     );
   }
+
+  void openDialog(BuildContext context) {
+    showDialog<Answers>(
+      context: context,
+      builder: (BuildContext context) => new SimpleDialog(
+        title: new Text('SimpleDialog'),
+        children: <Widget>[
+          createDialogOption(context, Answers.YES, 'Yes'),
+          createDialogOption(context, Answers.NO, 'No')
+        ],
+      ),
+    ).then((value) {
+      switch(value) {
+        case Answers.YES:
+          _setValue('Yes');
+          break;
+        case Answers.NO:
+          _setValue('No');
+          break;
+      }
+    });
+  }
+
+  createDialogOption(BuildContext context, Answers answer, String str) {
+    return new SimpleDialogOption(
+      child: new Text(str),
+      onPressed: (){
+        Navigator.pop(context, answer);
+      },
+    );
+  }
+
 }
 

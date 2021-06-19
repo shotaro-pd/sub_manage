@@ -39,7 +39,7 @@ class DBProvider {
             "serviceName TEXT,"
             "paymentDate TEXT,"
             "price Int,"
-
+            "color Text"
             ")"
     );
   }
