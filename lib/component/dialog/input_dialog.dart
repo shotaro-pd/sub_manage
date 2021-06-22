@@ -15,11 +15,11 @@ class _InputDialogState extends State<InputDialog> {
       title: Text('確認'),
       content: Text('確認のダイアログです。'),
       actions: <Widget>[
-        RaisedButton(
+        ElevatedButton(
           child: Text('Cancel'),
           onPressed: () => Navigator.of(context).pop(0),
         ),
-        RaisedButton(
+        ElevatedButton(
           child: Text('OK'),
           onPressed: () => Navigator.of(context).pop(1),
         ),
