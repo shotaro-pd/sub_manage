@@ -1,4 +1,5 @@
 import '../importer.dart';
+import '../dialog/input_dialog.dart';
 
 
 class AddSubscriptionListBody extends StatefulWidget {
@@ -68,8 +69,14 @@ class _AddSubscriptionListBodyState extends State<AddSubscriptionListBody> {
             ],
           )
       ),
-      onTap: () {
-
+      onTap: () async {
+        await showDialog<int>(
+          context: context,
+          barrierDismissible: false,
+          builder: (BuildContext context){
+            return InputDialog();
+          }
+        );
       },
     );
   }
