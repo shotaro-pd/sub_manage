@@ -1,7 +1,8 @@
 import 'importer.dart';
 
-class Header extends StatelessWidget with PreferredSizeWidget{
-  Header({Key key, this.title, this.leadingButton,this.actionButton}) : super(key: key);
+class Header extends StatelessWidget with PreferredSizeWidget {
+  Header({Key key, this.title, this.leadingButton, this.actionButton})
+      : super(key: key);
 
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);

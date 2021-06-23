@@ -1,7 +1,6 @@
 import '../importer.dart';
 
 class InputDialog extends StatefulWidget {
-
   InputDialog({Key key}) : super(key: key);
 
   @override
@@ -9,11 +8,21 @@ class InputDialog extends StatefulWidget {
 }
 
 class _InputDialogState extends State<InputDialog> {
+  TextEditingController _textFieldController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
       title: Text('確認'),
-      content: Text('確認のダイアログです。'),
+      content: Column(
+        children: [
+          Text('確認のダイアログです。'),
+          TextField(
+            decoration: InputDecoration(hintText: "ここに入力"),
+            controller: _textFieldController,
+          ),
+        ],
+      ),
       actions: <Widget>[
         ElevatedButton(
           child: Text('Cancel'),

@@ -1,9 +1,7 @@
 import '../importer.dart';
 import '../dialog/input_dialog.dart';
 
-
 class AddSubscriptionListBody extends StatefulWidget {
-
   AddSubscriptionListBody({Key key}) : super(key: key);
 
   @override
@@ -11,28 +9,25 @@ class AddSubscriptionListBody extends StatefulWidget {
 }
 
 class _AddSubscriptionListBodyState extends State<AddSubscriptionListBody> {
-
   @override
   Widget build(BuildContext context) {
-    return ListView(
-        children: [
-          _menuItem("自分で追加","0", Icon(Icons.add_box_outlined)),
-          _menuItem("Amazon Prime","500", Icon(Icons.local_shipping)),
-          _menuItem("Youtube Premium","1180", Icon(Icons.movie)),
-          _menuItem("Netflix","1000", Icon(Icons.movie)),
-          _menuItem("fulu","1100", Icon(Icons.movie)),
-          _menuItem("niconico Premium","980", Icon(Icons.movie)),
-        ]
-    );
+    return ListView(children: [
+      _menuItem("自分で追加", "0", Icon(Icons.add_box_outlined)),
+      _menuItem("Amazon Prime", "500", Icon(Icons.local_shipping)),
+      _menuItem("Youtube Premium", "1180", Icon(Icons.movie)),
+      _menuItem("Netflix", "1000", Icon(Icons.movie)),
+      _menuItem("fulu", "1100", Icon(Icons.movie)),
+      _menuItem("niconico Premium", "980", Icon(Icons.movie)),
+    ]);
   }
 
-  Widget _menuItem(String title,String price, Icon icon) {
+  Widget _menuItem(String title, String price, Icon icon) {
     return GestureDetector(
-      child:Container(
+      child: Container(
           padding: EdgeInsets.all(8.0),
           decoration: new BoxDecoration(
-              border: new Border(bottom: BorderSide(width: 1.0, color: Colors.grey))
-          ),
+              border: new Border(
+                  bottom: BorderSide(width: 1.0, color: Colors.grey))),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -45,41 +40,21 @@ class _AddSubscriptionListBodyState extends State<AddSubscriptionListBody> {
                     ),
                     Text(
                       title,
-                      style: TextStyle(
-                          color:Colors.black,
-                          fontSize: 18.0
-                      ),
+                      style: TextStyle(color: Colors.black, fontSize: 18.0),
                     ),
                   ],
                 ),
               ),
-
               Container(
                 child: Text(
-                  "¥"+price+"/month",
-                  style: TextStyle(
-                      color:Colors.black,
-                      fontSize: 18.0
-                  ),
+                  "¥" + price + "/month",
+                  style: TextStyle(color: Colors.black, fontSize: 18.0),
                   textAlign: TextAlign.left,
                 ),
-
               ),
-
             ],
-          )
-      ),
-      onTap: () async {
-        await showDialog<int>(
-          context: context,
-          barrierDismissible: false,
-          builder: (BuildContext context){
-            return InputDialog();
-          }
-        );
-      },
+          )),
+      onTap: () {},
     );
   }
-
 }
-

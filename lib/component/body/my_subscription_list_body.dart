@@ -1,7 +1,6 @@
 import '../importer.dart';
 
 class MySubscriptionListBody extends StatefulWidget {
-
   MySubscriptionListBody({Key key}) : super(key: key);
 
   @override
@@ -11,9 +10,6 @@ class MySubscriptionListBody extends StatefulWidget {
 class _MySubscriptionListBodyState extends State<MySubscriptionListBody> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-        children: [
-        ]
-    );
+    return ListView(children: []);
   }
 }

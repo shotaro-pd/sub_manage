@@ -10,14 +10,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: ConvenientPage(
-            appBar: Header(title: 'サブマネ',
-              leadingButton: SettingIconButton(),
-              actionButton: AddIconButton(),
-            ),
-            body: MySubscriptionListBody()
-        ),
+      debugShowCheckedModeBanner: false,
+      home: ConvenientPage(
+          appBar: Header(
+            title: 'サブマネ',
+            leadingButton: SettingIconButton(),
+            actionButton: AddIconButton(),
+          ),
+          body: MySubscriptionListBody()),
     );
   }
 }

@@ -1,8 +1,7 @@
 import 'importer.dart';
 
-class ConvenientPage extends StatelessWidget{
-
-  ConvenientPage({Key key,this.appBar,this.body}) : super(key: key);
+class ConvenientPage extends StatelessWidget {
+  ConvenientPage({Key key, this.appBar, this.body}) : super(key: key);
 
   final Widget appBar;
   final Widget body;
@@ -10,9 +9,8 @@ class ConvenientPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: this.appBar,
-        body: this.body,
+      appBar: this.appBar,
+      body: this.body,
     );
   }
 }
-
