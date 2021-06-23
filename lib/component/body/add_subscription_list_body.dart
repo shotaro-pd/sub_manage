@@ -1,5 +1,6 @@
+import 'package:sub_manage/component/dialog/subscription_input_dialog.dart';
 import '../importer.dart';
-import '../dialog/input_dialog.dart';
+
 
 class AddSubscriptionListBody extends StatefulWidget {
   AddSubscriptionListBody({Key key}) : super(key: key);
@@ -9,6 +10,9 @@ class AddSubscriptionListBody extends StatefulWidget {
 }
 
 class _AddSubscriptionListBodyState extends State<AddSubscriptionListBody> {
+
+  SubscriptionInputDialog subscriptionInputDialog = new SubscriptionInputDialog();
+
   @override
   Widget build(BuildContext context) {
     return ListView(children: [
@@ -54,7 +58,9 @@ class _AddSubscriptionListBodyState extends State<AddSubscriptionListBody> {
               ),
             ],
           )),
-      onTap: () {},
+      onTap: () {
+        subscriptionInputDialog.displayTextInputDialog(context);
+      },
     );
   }
 }

@@ -8,15 +8,16 @@ class SubscriptionInputDialog {
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: Text('確認'),
-            content: Column(
-              children: [
-                Text('確認のダイアログです。'),
-                TextField(
-                  decoration: InputDecoration(hintText: "ここに入力"),
-                  controller: _textFieldController,
-                ),
-              ],
+            title: Text('サブスクリプションを入力'),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  TextField(
+                    decoration: InputDecoration(hintText: "ここに入力"),
+                    controller: _textFieldController,
+                  ),
+                ],
+              ),
             ),
             actions: <Widget>[
               ElevatedButton(
