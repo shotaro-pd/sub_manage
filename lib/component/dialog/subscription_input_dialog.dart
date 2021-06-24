@@ -13,7 +13,7 @@ class SubscriptionInputDialog {
               child: ListBody(
                 children: <Widget>[
                   TextField(
-                    decoration: InputDecoration(hintText: "ここに入力"),
+                    decoration: InputDecoration(hintText: "ここに入力をする"),
                     controller: _textFieldController,
                   ),
                 ],
